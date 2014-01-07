@@ -1,0 +1,9 @@
+{% if latest_trick_list %}
+    <ul>
+    {% for trick in latest_trick_list %}
+        <li><a href="/tricks/{{ trick.id }}/">{{ trick.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No tricks are available.</p>
+{% endif %}
